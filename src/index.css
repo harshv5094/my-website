@@ -1,8 +1,16 @@
+/* Importing My Fonts */
+@import "@fontsource/jetbrains-mono";
+@import "@fontsource/ibm-plex-sans";
+@import "@fontsource/ibm-plex-serif";
+
+/* Importing Tailwind Css Configuration */
 @import 'tailwindcss';
 
 
-
 @theme {
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-serif: "IBM Plex Serif", Georgia, Cambria, serif;
+  --font-mono: "JetBrains Mono", monospace;
 
   --color-neutral: {
     50: oklch(0.97 0.01 95);
