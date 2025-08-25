@@ -7,7 +7,7 @@ interface MainTypes {
 
 function Main({ children, className }: MainTypes) {
   return (
-    <article className={`flex-grow flex flex-row justify-center ${className || ""}`}>
+    <article className={`${className} flex-grow flex flex-row justify-center mx-4 md:mx-10 `}>
       {children}
     </article>
   )
