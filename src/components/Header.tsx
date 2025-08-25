@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
-import { Menu, X, Sun, Moon } from 'lucide-react'
 import { useTheme } from '../context/themeToggle'
+import { LuSun, LuMoon, LuMenu, LuX } from 'react-icons/lu'
 
 function Header() {
   const [open, setOpen] = useState(false)
@@ -20,7 +20,7 @@ function Header() {
 
         {/* Right: Links (desktop) */}
         <section className="flex items-center">
-          <div className="hidden md:flex space-x-4">
+          <div className="hidden md:flex space-x-4 px-4">
             <Link to="/" className="hover:underline">
               Home
             </Link>
@@ -39,9 +39,9 @@ function Header() {
               className="p-2 mx-2 rounded-lg border hover:bg-gray-100 dark:hover:bg-neutral-700"
             >
               {theme === 'light' ? (
-                <Sun className="h-5 w-5" />
+                <LuSun className="h-5 w-5" />
               ) : (
-                <Moon className="h-5 w-5" />
+                <LuMoon className="h-5 w-5 " />
               )}
             </button>
           </div>
@@ -52,7 +52,11 @@ function Header() {
               onClick={() => setOpen(!open)}
               className="p-2 mx-2 rounded-lg border hover:bg-gray-100 dark:hover:bg-neutral-700"
             >
-              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {open ? (
+                <LuX className="h-5 w-5" />
+              ) : (
+                <LuMenu className="h-5 w-5" />
+              )}
             </button>
           </div>
         </section>
