@@ -1,12 +1,12 @@
-import { useEffect } from "react"
-import Main from "../components/Main"
-import { useTheme } from "../context/themeToggle"
+import { useEffect } from 'react'
+import Main from '../components/Main'
+import { useTheme } from '../context/themeToggle'
 
 function Home() {
   const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
-    document.title = "Harsh Vyapari - Home"
+    document.title = 'Harsh Vyapari - Home'
   }, [])
 
   return (
