@@ -386,20 +386,30 @@
     "@eslint/core" "^0.15.2"
     levn "^0.4.1"
 
-"@fontsource/ibm-plex-sans@^5.2.6":
+"@fontsource/inter@^5.2.6":
   version "5.2.6"
-  resolved "https://registry.yarnpkg.com/@fontsource/ibm-plex-sans/-/ibm-plex-sans-5.2.6.tgz#89c5cd09ed3956bf5ff061bb57a61bf574d7f38d"
-  integrity sha512-yclktpagJncROwdWHHEfPsrIfoo3uiIeDFchvmjNmTW/YMBfLYWJnUv19EAqPNhGizdtmcH9FjzOR2094Z2uPg==
-
-"@fontsource/ibm-plex-serif@^5.2.6":
-  version "5.2.6"
-  resolved "https://registry.yarnpkg.com/@fontsource/ibm-plex-serif/-/ibm-plex-serif-5.2.6.tgz#eebbef739d90be13c53db98b99aad90d0c4e72dc"
-  integrity sha512-/FyBI9qciE6QQjF0Q2Uul68tz9vPsGZgh13ftKcyHsGkP8TvcW+2H77KurT7rN3usWHEbGgjoUkSzUEG7z+fRQ==
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-5.2.6.tgz#2c705ea57d7af283a05bb1ca59fb0f06fc5de3be"
+  integrity sha512-CZs9S1CrjD0jPwsNy9W6j0BhsmRSQrgwlTNkgQXTsAeDRM42LBRLo3eo9gCzfH4GvV7zpyf78Ozfl773826csw==
 
 "@fontsource/jetbrains-mono@^5.2.6":
   version "5.2.6"
   resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-5.2.6.tgz#1a78f8ef6fa206f619298cbefd769ab4ef1279f4"
   integrity sha512-nz//dBr99hXZmHp10wgNI00qThWImkzRR5PQjvRM+rpmuHO5rYBJCqPPWufidCvmkkryXx/GOP/lgqsM3R3Org==
+
+"@fontsource/lora@^5.2.6":
+  version "5.2.6"
+  resolved "https://registry.yarnpkg.com/@fontsource/lora/-/lora-5.2.6.tgz#56e9bb02a6f0ccd0e3b5ecfab7e996295283ed78"
+  integrity sha512-t/am+C/kdrvpWuOL1enoKCrlHiRHH0hejaPm9dA88Vp2gsDKF4o6OzKzuAMQo8kLd4Jlmg08Cb6Z76LaYB/Bsw==
+
+"@fontsource/nunito@^5.2.6":
+  version "5.2.6"
+  resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-5.2.6.tgz#62f2fefbb0acc917e6f9a2e26cbdcc4c44c168c3"
+  integrity sha512-FjSPmzBFZ3za4w2USmCWrxDaZ1fTWowSpV9DXfs7Ll/150BI48epE6E69MtOx8GqOPimHNkVUkES22lqDw+bug==
+
+"@fontsource/roboto@^5.2.6":
+  version "5.2.6"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-5.2.6.tgz#93a2a5ef98cc79880355de0aac71def215b873e7"
+  integrity sha512-hzarG7yAhMoP418smNgfY4fO7UmuUEm5JUtbxCoCcFHT0hOJB+d/qAEyoNjz7YkPU5OjM2LM8rJnW8hfm0JLaA==
 
 "@humanfs/core@^0.19.1":
   version "0.19.1"

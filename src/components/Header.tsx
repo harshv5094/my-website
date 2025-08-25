@@ -13,7 +13,7 @@ function Header() {
       <nav className="flex justify-between items-center md:px-20">
         {/* Left: Name */}
         <section>
-          <Link to="/" className="text-xl font-bold">
+          <Link to="/" className="text-xl font-serif font-bold hover:underline">
             Harsh Vyapari
           </Link>
         </section>
