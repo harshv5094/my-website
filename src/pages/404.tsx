@@ -1,7 +1,13 @@
 import { Link } from "react-router"
 import Main from "../components/Main"
+import { useEffect } from "react"
 
 function NotFound() {
+
+  useEffect(() => {
+    document.title = "Harsh Vyapari - Not Found"
+  }, [])
+
   return (
     <Main className="items-center">
       <section className="text-center">
