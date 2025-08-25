@@ -1,19 +1,88 @@
+import { useState } from 'react'
 import { Link } from 'react-router'
+import { Menu, X, Sun, Moon } from 'lucide-react'
+import { useTheme } from '../context/themeToggle'
 
 function Header() {
+  const [open, setOpen] = useState(false)
+
+  const { theme, toggleTheme } = useTheme()
+
   return (
-    <header className="px-2 py-4">
-      <nav className="flex justify-center space-x-6">
-        <Link to="/" className="hover:underline">
-          Home
-        </Link>
-        <Link to="/about" className="hover:underline">
-          About
-        </Link>
-        <Link to="/work" className="hover:underline">
-          Work
-        </Link>
+    <header className="px-4 py-4 border-b mb-2">
+      <nav className="flex justify-between items-center md:px-20">
+        {/* Left: Name */}
+        <section>
+          <Link to="/" className="text-xl font-bold">
+            Harsh Vyapari
+          </Link>
+        </section>
+
+        {/* Right: Links (desktop) */}
+        <section className="flex items-center">
+          <div className="hidden md:flex space-x-4">
+            <Link to="/" className="hover:underline">
+              Home
+            </Link>
+            <Link to="/about" className="hover:underline">
+              About
+            </Link>
+            <Link to="/work" className="hover:underline">
+              Work
+            </Link>
+          </div>
+
+          {/* Theme Toggle Button*/}
+          <div>
+            <button
+              onClick={toggleTheme}
+              className="p-2 mx-2 rounded-lg border hover:bg-gray-100 dark:hover:bg-neutral-700"
+            >
+              {theme === 'light' ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </button>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setOpen(!open)}
+              className="p-2 mx-2 rounded-lg border hover:bg-gray-100 dark:hover:bg-neutral-700"
+            >
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
+        </section>
       </nav>
+      {/* Mobile dropdown */}
+      {open && (
+        <div className="md:hidden mt-2 flex flex-col space-y-2 border-t pt-2">
+          <Link
+            to="/"
+            className="hover:underline"
+            onClick={() => setOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="hover:underline"
+            onClick={() => setOpen(false)}
+          >
+            About
+          </Link>
+          <Link
+            to="/work"
+            className="hover:underline"
+            onClick={() => setOpen(false)}
+          >
+            Work
+          </Link>
+        </div>
+      )}
     </header>
   )
 }
