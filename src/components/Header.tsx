@@ -9,7 +9,7 @@ function Header() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <header className="px-4 py-4 border-b mb-2">
+    <header className="px-4 py-4 border-b mb-2 z-2 relative">
       <nav className="flex justify-between items-center md:px-20">
         {/* Left: Name */}
         <section>
@@ -36,6 +36,7 @@ function Header() {
           <div>
             <button
               onClick={toggleTheme}
+              aria-label="theme-toggle-button"
               className=" p-2 mx-2 rounded-lg border bg-gruvbox-bg text-gruvbox-fg 
                           hover:bg-gruvbox-yellow hover:text-gruvbox-bg
                           dark:hover:bg-gruvbox-aqua dark:hover:text-gruvbox-bg"
@@ -52,6 +53,7 @@ function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setOpen(!open)}
+              aria-label="dropdown-menu"
               className=" p-2 mx-2 rounded-lg border bg-gruvbox-bg text-gruvbox-fg 
                           hover:bg-gruvbox-yellow hover:text-gruvbox-bg
                           dark:hover:bg-gruvbox-aqua dark:hover:text-gruvbox-bg"
