@@ -36,12 +36,14 @@ function Header() {
           <div>
             <button
               onClick={toggleTheme}
-              className="p-2 mx-2 rounded-lg border hover:bg-gray-100 dark:hover:bg-neutral-700"
+              className=" p-2 mx-2 rounded-lg border bg-gruvbox-bg text-gruvbox-fg 
+                          hover:bg-gruvbox-yellow hover:text-gruvbox-bg
+                          dark:hover:bg-gruvbox-aqua dark:hover:text-gruvbox-bg"
             >
               {theme === 'light' ? (
-                <LuSun className="h-5 w-5" />
+                <LuMoon className="h-5 w-5" />
               ) : (
-                <LuMoon className="h-5 w-5 " />
+                <LuSun className="h-5 w-5" />
               )}
             </button>
           </div>
@@ -50,7 +52,9 @@ function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setOpen(!open)}
-              className="p-2 mx-2 rounded-lg border hover:bg-gray-100 dark:hover:bg-neutral-700"
+              className=" p-2 mx-2 rounded-lg border bg-gruvbox-bg text-gruvbox-fg 
+                          hover:bg-gruvbox-yellow hover:text-gruvbox-bg
+                          dark:hover:bg-gruvbox-aqua dark:hover:text-gruvbox-bg"
             >
               {open ? (
                 <LuX className="h-5 w-5" />
