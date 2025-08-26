@@ -8,7 +8,7 @@ function NotFound() {
   }, [])
 
   return (
-    <Main className="items-center">
+    <Main horizontal={true} vertical={true}>
       <section className="text-center">
         <p className="text-2xl">404 - Not Found</p>
         <br />
