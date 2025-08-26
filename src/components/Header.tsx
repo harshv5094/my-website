@@ -9,11 +9,14 @@ function Header() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <header className="px-4 py-4 border-b z-20 backdrop-blur-2xl fixed w-full">
+    <header className="px-4 py-4 z-20 border-b-2 backdrop-blur-2xl fixed w-full">
       <nav className="flex justify-between items-center md:px-20">
         {/* Left: Name */}
         <section>
-          <Link to="/" className="text-xl font-serif font-bold hover:underline">
+          <Link
+            to="/"
+            className="text-xl font-serif font-semibold hover:underline"
+          >
             Harsh Vyapari
           </Link>
         </section>
@@ -37,7 +40,7 @@ function Header() {
             <button
               onClick={toggleTheme}
               aria-label="theme-toggle-button"
-              className=" p-2 mx-2 rounded-lg border bg-gruvbox-bg text-gruvbox-fg 
+              className=" p-2 mx-2 rounded-lg border-2  bg-gruvbox-bg text-gruvbox-fg 
                           hover:bg-gruvbox-yellow hover:text-gruvbox-bg
                           dark:hover:bg-gruvbox-aqua dark:hover:text-gruvbox-bg"
             >
@@ -54,7 +57,7 @@ function Header() {
             <button
               onClick={() => setOpen(!open)}
               aria-label="dropdown-menu"
-              className=" p-2 mx-2 rounded-lg border bg-gruvbox-bg text-gruvbox-fg 
+              className=" p-2 mx-2 rounded-lg border-2 bg-gruvbox-bg text-gruvbox-fg 
                           hover:bg-gruvbox-yellow hover:text-gruvbox-bg
                           dark:hover:bg-gruvbox-aqua dark:hover:text-gruvbox-bg"
             >
