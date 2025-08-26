@@ -10,7 +10,7 @@ function Home() {
   }, [])
 
   return (
-    <Main className="items-center">
+    <Main horizontal={true} vertical={true}>
       <div className="flex flex-col items-center text-center">
         <section className="mt-5">
           <img
