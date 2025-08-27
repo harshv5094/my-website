@@ -1,24 +1,23 @@
 import { Link } from 'react-router'
 import Main from '../components/Main'
-import { useEffect } from 'react'
+import SEO from '../components/SEO'
 
 function NotFound() {
-  useEffect(() => {
-    document.title = 'Harsh Vyapari - Not Found'
-  }, [])
-
   return (
-    <Main horizontal={true} vertical={true}>
-      <section className="text-center">
-        <p className="text-2xl">404 - Not Found</p>
-        <br />
-        <div>
-          <Link to="/" className="hover:underline">
-            Go To Home
-          </Link>
-        </div>
-      </section>
-    </Main>
+    <>
+      <SEO title="Harsh Vyapari - 404" />
+      <Main horizontal={true} vertical={true}>
+        <section className="text-center">
+          <p className="text-2xl">404 - Not Found</p>
+          <br />
+          <div>
+            <Link to="/" className="hover:underline">
+              Go To Home
+            </Link>
+          </div>
+        </section>
+      </Main>
+    </>
   )
 }
 

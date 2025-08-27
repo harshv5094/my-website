@@ -1,17 +1,16 @@
-import { useEffect } from 'react'
 import Main from '../components/Main'
+import SEO from '../components/SEO'
 
 function About() {
-  useEffect(() => {
-    document.title = 'Harsh Vyapari - About'
-  }, [])
-
   return (
-    <Main>
-      <div className="text-2xl">
-        <h1>About Page</h1>
-      </div>
-    </Main>
+    <>
+      <SEO title="Harsh Vyapari - About" />
+      <Main>
+        <div className="text-2xl">
+          <h1>About Page</h1>
+        </div>
+      </Main>
+    </>
   )
 }
 
