@@ -20,6 +20,11 @@ function SEO({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="robots" content="index, follow" />
+      <meta property="og:title" content="Harsh Vyapari - Software Developer" />
+      <meta
+        property="og:description"
+        content="Linux and Open Source enthusiast"
+      />
     </Helmet>
   )
 }
