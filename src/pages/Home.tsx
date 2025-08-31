@@ -31,14 +31,17 @@ function Home() {
             <SocialIcons
               url={'https://github.com/harshv5094'}
               Icon={FaGithub}
+              label={'GitHub'}
             />
             <SocialIcons
               url={'https://bsky.app/profile/harshv5094.bsky.social'}
               Icon={FaBluesky}
+              label={'Bluesky'}
             />
             <SocialIcons
               url={'https://linkedin.com/in/harshv5094'}
               Icon={FaLinkedin}
+              label={'Linkedin'}
             />
           </section>
           <section className="mt-2">
