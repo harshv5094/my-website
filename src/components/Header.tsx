@@ -26,13 +26,13 @@ function Header() {
           <div className="hidden md:flex space-x-4 px-4">
             <Link
               to="/"
-              className="hover:underline hover:text-yellow-600 dark:hover:text-yellow-500"
+              className="hover:underline hover:text-accent dark:hover:text-accent"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="hover:underline hover:text-yellow-600 dark:hover:text-yellow-500"
+              className="hover:underline hover:text-accent dark:hover:text-accent"
             >
               About
             </Link>
@@ -44,9 +44,9 @@ function Header() {
             onClick={toggleTheme}
             aria-label="theme-toggle-button"
             className="p-2 mx-2 rounded-lg border-2 
-            hover:bg-yellow-600 hover:border-yellow-600 
-            dark:hover:bg-yellow-500 dark:hover:border-yellow-500
-            dark:hover:text-gruvbox-bg hover:text-gruvbox-bg"
+            hover:bg-accent hover:border-accent 
+            dark:hover:bg-accent dark:hover:border-accent
+            dark:hover:text-theme-bg hover:text-theme-bg"
           >
             {theme === 'light' ? (
               <LuMoon className="h-5 w-5" />
@@ -61,9 +61,9 @@ function Header() {
             onClick={() => setOpen(!open)}
             aria-label="dropdown-menu"
             className="md:hidden p-2 mx-2 rounded-lg border-2
-            hover:bg-yellow-600 hover:border-yellow-600 
-            dark:hover:bg-yellow-500 dark:hover:border-yellow-500
-            dark:hover:text-gruvbox-bg hover:text-gruvbox-bg"
+            hover:bg-accent hover:border-accent 
+            dark:hover:bg-accent dark:hover:border-accent
+            dark:hover:text-theme-bg hover:text-theme-bg"
           >
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
@@ -92,7 +92,7 @@ function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden mt-2 flex flex-col space-y-2 border-t pt-2"
+            className="md:hidden mt-2 flex flex-col space-y-2 border-t pt-2 hover:text-yellow-500 dark:hover:text-yellow-600"
           >
             <Link
               to="/"

@@ -49,7 +49,7 @@ function About() {
                 <a
                   target="_blank"
                   href="https://github.com/harshv5094"
-                  className="hover:underline text-yellow-600 dark:text-yellow-500"
+                  className="hover:underline text-accent dark:text-accent"
                 >
                   GitHub
                 </a>{' '}
@@ -57,7 +57,7 @@ function About() {
                 <a
                   target="_blank"
                   href="https://bsky.app/profile/harshv5094.bsky.social"
-                  className="hover:underline text-yellow-600 dark:text-yellow-500"
+                  className="hover:underline text-accent dark:text-accent"
                 >
                   Bluesky
                 </a>{' '}
@@ -65,7 +65,7 @@ function About() {
                 <a
                   target="_blank"
                   href="https://linkedin.com/in/harshv5094"
-                  className="hover:underline text-yellow-600 dark:text-yellow-500"
+                  className="hover:underline text-accent dark:text-accent"
                 >
                   Linkedin
                 </a>{' '}
@@ -76,7 +76,7 @@ function About() {
                   target="_blank"
                   href="https://raw.githubusercontent.com/harshv5094/harshv5094/refs/heads/main/git-sign-public.asc"
                 >
-                  <code className="text-yellow-600 dark:text-yellow-500 hover:underline">
+                  <code className="text-accent dark:text-accent hover:underline">
                     525F AC3D 751C F169 E31C 0E43 A897 C10C 48C4 E722
                   </code>
                 </a>
@@ -92,7 +92,7 @@ function About() {
                 GitHub Followers:{' '}
                 <a
                   target="_blank"
-                  className="hover:underline text-yellow-600 dark:text-yellow-500"
+                  className="hover:underline text-accent dark:text-accent"
                   href="https://github.com/harshv5094?tab=followers"
                 >
                   {stats.followers}
@@ -102,7 +102,7 @@ function About() {
                 GitHub Following:{' '}
                 <a
                   target="_blank"
-                  className="hover:underline text-yellow-600 dark:text-yellow-500"
+                  className="hover:underline text-accent dark:text-accent"
                   href="https://github.com/harshv5094?tab=following"
                 >
                   {stats.following}

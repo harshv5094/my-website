@@ -1,38 +1,25 @@
-/* Importing My Fonts */
+/* Fonts */
 @import '@fontsource/jetbrains-mono';
 @import '@fontsource/inter';
 @import '@fontsource/roboto';
 
-/* Importing Tailwind Css Configuration */
+/* Tailwind */
 @import 'tailwindcss';
 
 @theme {
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-serif: 'Roboto', Georgia, Cambria, serif;
   --font-mono: 'JetBrains Mono', monospace;
-  /* Base (Light mode by default) */
-  --color-gruvbox-bg: hsl(45, 35%, 85%); /* light bg0 */
-  --color-gruvbox-fg: hsl(20, 15%, 20%); /* dark fg */
 
-  --color-gruvbox-red: hsl(0, 65%, 60%);
-  --color-gruvbox-green: hsl(75, 35%, 55%);
-  --color-gruvbox-yellow: hsl(45, 65%, 60%);
-  --color-gruvbox-blue: hsl(200, 35%, 55%);
-  --color-gruvbox-purple: hsl(300, 25%, 60%);
-  --color-gruvbox-aqua: hsl(175, 35%, 55%);
-  --color-gruvbox-orange: hsl(30, 65%, 55%);
+  /* Base (light) */
+  --color-theme-bg: theme(--color-zinc-100); /* light background */
+  --color-theme-fg: theme(--color-zinc-900); /* dark text */
+  --color-accent: theme(--color-amber-600);
 }
 
-/* === DARK CLASS SUPPORT === */
-.dark {
-  --color-gruvbox-bg: hsl(30, 10%, 15%); /* dark bg0 */
-  --color-gruvbox-fg: hsl(40, 25%, 85%); /* light fg */
-
-  --color-gruvbox-red: hsl(0, 60%, 65%);
-  --color-gruvbox-green: hsl(75, 45%, 65%);
-  --color-gruvbox-yellow: hsl(45, 75%, 65%);
-  --color-gruvbox-blue: hsl(200, 45%, 65%);
-  --color-gruvbox-purple: hsl(300, 35%, 70%);
-  --color-gruvbox-aqua: hsl(175, 45%, 65%);
-  --color-gruvbox-orange: hsl(30, 70%, 65%);
+/* Dark overrides */
+:root.dark {
+  --color-theme-bg: theme(--color-zinc-900); /* dark background */
+  --color-theme-fg: theme(--color-zinc-100); /* light text */
+  --color-accent: theme(--color-amber-400);
 }
