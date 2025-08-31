@@ -13,17 +13,10 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState<Theme>('dark')
 
-  // Load saved theme or fallback to system preference
+  // Load saved theme or fallback to dark
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as Theme | null
-    if (savedTheme) {
-      setTheme(savedTheme)
-    } else {
-      const prefersDark = window.matchMedia(
-        '(prefers-color-scheme: dark)'
-      ).matches
-      setTheme(prefersDark ? 'dark' : 'light')
-    }
+    setTheme(savedTheme ?? 'dark')
   }, [])
 
   // Apply theme and persist
