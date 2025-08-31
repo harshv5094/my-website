@@ -31,54 +31,12 @@ function About() {
           <section className="mt-2">
             <h2 className="text-2xl font-serif">Namaste 🙏</h2>
             <p className="font-sans mt-2">
-              My name is Harsh Vyapari, a Software Developer from India.
-              <br />
-              I love exploring computers, technology, and everything related!
+              My name is Harsh Vyapari, a Software Developer from India. I love
+              exploring computers, technology, and everything related!
               <br />
               I'm passionate about Linux, FOSS, and customizing my workflow.
-              <br />
               Always curious to learn, experiment, and build cool stuff.
             </p>
-          </section>
-
-          {/* My Stats */}
-          <section>
-            <h2 className="text-2xl font-serif">My Stats</h2>
-            <div className="flex flex-col  gap-4 p-4">
-              {/* GitHub Stats */}
-              <img
-                src="https://github-readme-stats.vercel.app/api?username=harshv5094&show_icons=true&rank_icon=github&theme=gruvbox"
-                alt="Harsh's GitHub stats"
-              />
-
-              {/* Top Languages */}
-              <img
-                src="https://github-readme-stats.vercel.app/api/top-langs/?username=harshv5094&layout=compact&theme=gruvbox"
-                alt="Top Languages"
-              />
-            </div>
-            <ul className="list-disc ml-5 mt-2">
-              <li>
-                GitHub Followers:{' '}
-                <a
-                  target="_blank"
-                  className="hover:underline dark:hover:text-blue-400  hover:text-blue-500"
-                  href="https://github.com/harshv5094?tab=followers"
-                >
-                  {stats.followers}
-                </a>{' '}
-              </li>
-              <li>
-                GitHub Following:{' '}
-                <a
-                  target="_blank"
-                  className="hover:underline dark:hover:text-blue-400  hover:text-blue-500"
-                  href="https://github.com/harshv5094?tab=following"
-                >
-                  {stats.following}
-                </a>{' '}
-              </li>
-            </ul>
           </section>
 
           {/* Connect With Me */}
@@ -122,6 +80,46 @@ function About() {
                 </a>
               </section>
             </p>
+          </section>
+
+          {/* My Stats */}
+          <section>
+            <h2 className="text-2xl font-serif">My Stats</h2>
+            <ul className="list-disc ml-5 mt-2">
+              <li>
+                GitHub Followers:{' '}
+                <a
+                  target="_blank"
+                  className="hover:underline dark:hover:text-blue-400  hover:text-blue-500"
+                  href="https://github.com/harshv5094?tab=followers"
+                >
+                  {stats.followers}
+                </a>{' '}
+              </li>
+              <li>
+                GitHub Following:{' '}
+                <a
+                  target="_blank"
+                  className="hover:underline dark:hover:text-blue-400  hover:text-blue-500"
+                  href="https://github.com/harshv5094?tab=following"
+                >
+                  {stats.following}
+                </a>{' '}
+              </li>
+            </ul>
+            <div className="flex flex-col items-center gap-4 p-4">
+              {/* GitHub Stats */}
+              <img
+                src="https://github-readme-stats.vercel.app/api?username=harshv5094&show_icons=true&rank_icon=github&theme=gruvbox"
+                alt="Harsh's GitHub stats"
+              />
+
+              {/* Top Languages */}
+              <img
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=harshv5094&layout=compact&theme=gruvbox"
+                alt="Top Languages"
+              />
+            </div>
           </section>
         </div>
       </Main>

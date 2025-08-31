@@ -3,6 +3,7 @@ import Main from '../components/Main'
 import SocialIcons from '../components/SocialIcons'
 import { FaBluesky, FaGithub, FaLinkedin } from 'react-icons/fa6'
 import SEO from '../components/SEO'
+import { Link } from 'react-router'
 
 function Home() {
   return (
@@ -39,6 +40,14 @@ function Home() {
               url={'https://linkedin.com/in/harshv5094'}
               Icon={FaLinkedin}
             />
+          </section>
+          <section className="mt-2">
+            <Link
+              to={'/about'}
+              className="hover:underline text-blue-500 dark:text-blue-400"
+            >
+              Show More {'->'}
+            </Link>
           </section>
         </div>
       </Main>
