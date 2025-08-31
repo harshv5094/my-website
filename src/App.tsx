@@ -5,10 +5,9 @@ import { HelmetProvider } from 'react-helmet-async'
 /* User Components */
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Home from './pages/Home'
 /* Pages */
+import Home from './pages/Home'
 import About from './pages/About'
-import Works from './pages/Works'
 import NotFound from './pages/404'
 
 function App() {
@@ -21,7 +20,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/works" element={<Works />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
           <Footer />

@@ -36,12 +36,6 @@ function Header() {
             >
               About
             </Link>
-            <Link
-              to="/works"
-              className="hover:underline dark:hover:text-blue-400  hover:text-blue-500"
-            >
-              Works
-            </Link>
           </div>
 
           {/* Theme Toggle Button */}
@@ -107,13 +101,6 @@ function Header() {
               onClick={() => setOpen(false)}
             >
               About
-            </Link>
-            <Link
-              to="/works"
-              className="hover:underline"
-              onClick={() => setOpen(false)}
-            >
-              Works
             </Link>
           </motion.div>
         )}
