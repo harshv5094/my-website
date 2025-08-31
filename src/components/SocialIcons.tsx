@@ -11,7 +11,7 @@ function SocialIcons({ url, Icon }: SocialIconsProps) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center justify-center hover:bg-blue-400 dark:hover:bg-blue-300 hover:text-gruvbox-bg dark:hover:text-gruvbox-bg p-2 rounded-full transition-colors"
+      className="inline-flex items-center justify-center hover:bg-gruvbox-yellow dark:hover:bg-gruvbox-yellow hover:text-gruvbox-bg dark:hover:text-gruvbox-bg p-2 rounded-full transition-colors"
       aria-label="social-media-buttons"
     >
       <Icon className="h-5 w-5" />

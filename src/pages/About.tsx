@@ -31,10 +31,12 @@ function About() {
           <section className="mt-2">
             <h2 className="text-2xl font-serif">Namaste 🙏</h2>
             <p className="font-sans mt-2">
-              My name is Harsh Vyapari, a Software Developer from India. I love
-              exploring computers, technology, and everything related!
+              My name is Harsh Vyapari, a Software Developer from India.
+              <br />
+              I love exploring computers, technology, and everything related!
               <br />
               I'm passionate about Linux, FOSS, and customizing my workflow.
+              <br />
               Always curious to learn, experiment, and build cool stuff.
             </p>
           </section>
@@ -47,7 +49,7 @@ function About() {
                 <a
                   target="_blank"
                   href="https://github.com/harshv5094"
-                  className="hover:underline dark:text-blue-400  text-blue-500"
+                  className="hover:underline text-yellow-600 dark:text-yellow-500"
                 >
                   GitHub
                 </a>{' '}
@@ -55,7 +57,7 @@ function About() {
                 <a
                   target="_blank"
                   href="https://bsky.app/profile/harshv5094.bsky.social"
-                  className="hover:underline dark:text-blue-400  text-blue-500"
+                  className="hover:underline text-yellow-600 dark:text-yellow-500"
                 >
                   Bluesky
                 </a>{' '}
@@ -63,7 +65,7 @@ function About() {
                 <a
                   target="_blank"
                   href="https://linkedin.com/in/harshv5094"
-                  className="hover:underline dark:text-blue-400  text-blue-500"
+                  className="hover:underline text-yellow-600 dark:text-yellow-500"
                 >
                   Linkedin
                 </a>{' '}
@@ -74,7 +76,7 @@ function About() {
                   target="_blank"
                   href="https://raw.githubusercontent.com/harshv5094/harshv5094/refs/heads/main/git-sign-public.asc"
                 >
-                  <code className="text-blue-500 dark:text-blue-400 hover:underline">
+                  <code className="text-yellow-600 dark:text-yellow-500 hover:underline">
                     525F AC3D 751C F169 E31C 0E43 A897 C10C 48C4 E722
                   </code>
                 </a>
@@ -90,7 +92,7 @@ function About() {
                 GitHub Followers:{' '}
                 <a
                   target="_blank"
-                  className="hover:underline dark:hover:text-blue-400  hover:text-blue-500"
+                  className="hover:underline text-yellow-600 dark:text-yellow-500"
                   href="https://github.com/harshv5094?tab=followers"
                 >
                   {stats.followers}
@@ -100,14 +102,14 @@ function About() {
                 GitHub Following:{' '}
                 <a
                   target="_blank"
-                  className="hover:underline dark:hover:text-blue-400  hover:text-blue-500"
+                  className="hover:underline text-yellow-600 dark:text-yellow-500"
                   href="https://github.com/harshv5094?tab=following"
                 >
                   {stats.following}
                 </a>{' '}
               </li>
             </ul>
-            <div className="flex flex-col items-center gap-4 p-4">
+            <div className="flex flex-col items-baseline gap-4 p-4">
               {/* GitHub Stats */}
               <img
                 src="https://github-readme-stats.vercel.app/api?username=harshv5094&show_icons=true&rank_icon=github&theme=gruvbox"

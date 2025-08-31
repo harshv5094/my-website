@@ -15,7 +15,7 @@ function Header() {
         <section>
           <Link
             to="/"
-            className="text-xl font-serif font-semibold hover:underline "
+            className="text-xl font-serif font-semibold hover:underline"
           >
             Harsh Vyapari
           </Link>
@@ -26,13 +26,13 @@ function Header() {
           <div className="hidden md:flex space-x-4 px-4">
             <Link
               to="/"
-              className="hover:underline dark:hover:text-blue-400  hover:text-blue-500"
+              className="hover:underline hover:text-yellow-600 dark:hover:text-yellow-500"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="hover:underline dark:hover:text-blue-400  hover:text-blue-500"
+              className="hover:underline hover:text-yellow-600 dark:hover:text-yellow-500"
             >
               About
             </Link>
@@ -43,7 +43,10 @@ function Header() {
             whileTap={{ scale: 0.85, rotate: 90 }}
             onClick={toggleTheme}
             aria-label="theme-toggle-button"
-            className="p-2 mx-2 rounded-lg border-2"
+            className="p-2 mx-2 rounded-lg border-2 
+            hover:bg-yellow-600 hover:border-yellow-600 
+            dark:hover:bg-yellow-500 dark:hover:border-yellow-500
+            dark:hover:text-gruvbox-bg hover:text-gruvbox-bg"
           >
             {theme === 'light' ? (
               <LuMoon className="h-5 w-5" />
@@ -57,7 +60,10 @@ function Header() {
             whileTap={{ scale: 0.85, rotate: 90 }}
             onClick={() => setOpen(!open)}
             aria-label="dropdown-menu"
-            className="md:hidden p-2 mx-2 rounded-lg border-2"
+            className="md:hidden p-2 mx-2 rounded-lg border-2
+            hover:bg-yellow-600 hover:border-yellow-600 
+            dark:hover:bg-yellow-500 dark:hover:border-yellow-500
+            dark:hover:text-gruvbox-bg hover:text-gruvbox-bg"
           >
             <AnimatePresence mode="wait" initial={false}>
               <motion.div

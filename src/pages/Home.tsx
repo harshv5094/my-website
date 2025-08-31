@@ -44,7 +44,7 @@ function Home() {
           <section className="mt-2">
             <Link
               to={'/about'}
-              className="hover:underline text-blue-500 dark:text-blue-400"
+              className="hover:underline text-yellow-600 dark:text-yellow-500"
             >
               Show More {'->'}
             </Link>

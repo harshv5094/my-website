@@ -13,7 +13,7 @@ function NotFound() {
           <div>
             <Link
               to="/"
-              className="hover:underline text-blue-500 dark:text-blue-400"
+              className="hover:underline text-yellow-600 dark:text-yellow-500"
             >
               Go To Home
             </Link>
