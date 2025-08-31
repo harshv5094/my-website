@@ -1,7 +1,7 @@
 import Main from '../components/Main'
 import SEO from '../components/SEO'
 
-function Work() {
+function Works() {
   return (
     <>
       <SEO title="Harsh Vyapari - Work" />
@@ -14,4 +14,4 @@ function Work() {
   )
 }
 
-export default Work
+export default Works

@@ -37,10 +37,10 @@ function Header() {
               About
             </Link>
             <Link
-              to="/work"
+              to="/works"
               className="hover:underline dark:hover:text-blue-400  hover:text-blue-500"
             >
-              Work
+              Works
             </Link>
           </div>
 
@@ -109,11 +109,11 @@ function Header() {
               About
             </Link>
             <Link
-              to="/work"
+              to="/works"
               className="hover:underline"
               onClick={() => setOpen(false)}
             >
-              Work
+              Works
             </Link>
           </motion.div>
         )}
