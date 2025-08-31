@@ -11,7 +11,10 @@ function NotFound() {
           <p className="text-2xl">404 - Not Found</p>
           <br />
           <div>
-            <Link to="/" className="hover:underline">
+            <Link
+              to="/"
+              className="hover:underline text-blue-500 dark:text-blue-400"
+            >
               Go To Home
             </Link>
           </div>
