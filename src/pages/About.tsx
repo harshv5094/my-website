@@ -76,6 +76,7 @@ function About() {
                   target="_blank"
                   href="https://raw.githubusercontent.com/harshv5094/harshv5094/refs/heads/main/git-sign-public.asc"
                 >
+                  <br />
                   <code className="text-accent dark:text-accent hover:underline">
                     525F AC3D 751C F169 E31C 0E43 A897 C10C 48C4 E722
                   </code>
