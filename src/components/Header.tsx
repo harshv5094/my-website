@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router'
+import { Link, NavLink } from 'react-router'
 import { useTheme } from '../context/themeToggle'
 import { LuSun, LuMoon, LuMenu, LuX } from 'react-icons/lu'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -24,18 +24,30 @@ function Header() {
         {/* Right: Links (desktop) */}
         <section className="flex items-center">
           <div className="hidden md:flex space-x-4 px-4">
-            <Link
+            <NavLink
               to="/"
-              className="hover:underline hover:text-accent dark:hover:text-accent"
+              className={({ isActive }) =>
+                `hover:underline ${
+                  isActive
+                    ? 'text-accent font-semibold underline'
+                    : 'text-inherit'
+                }`
+              }
             >
               Home
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/about"
-              className="hover:underline hover:text-accent dark:hover:text-accent"
+              className={({ isActive }) =>
+                `hover:underline ${
+                  isActive
+                    ? 'text-accent font-semibold underline'
+                    : 'text-inherit'
+                }`
+              }
             >
               About
-            </Link>
+            </NavLink>
           </div>
 
           {/* Theme Toggle Button */}
@@ -92,22 +104,31 @@ function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden mt-2 flex flex-col space-y-2 border-t pt-2 hover:text-yellow-500 dark:hover:text-yellow-600"
+            className="absolute top-full right-4 z-50 md:hidden flex flex-col space-y-2 
+                 w-1/2 max-w-xs rounded-2xl border bg-theme-bg p-4 shadow-lg dark:bg-theme-bg justify-end"
           >
-            <Link
+            <NavLink
               to="/"
-              className="hover:underline"
+              className={({ isActive }) =>
+                `hover:underline ${
+                  isActive ? 'text-accent font-semibold' : 'text-inherit'
+                }`
+              }
               onClick={() => setOpen(false)}
             >
               Home
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/about"
-              className="hover:underline"
+              className={({ isActive }) =>
+                `hover:underline ${
+                  isActive ? 'text-accent font-semibold' : 'text-inherit'
+                }`
+              }
               onClick={() => setOpen(false)}
             >
               About
-            </Link>
+            </NavLink>
           </motion.div>
         )}
       </AnimatePresence>
