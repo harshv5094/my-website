@@ -9,7 +9,7 @@ function Header() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <header className="px-4 py-4 z-20 border-b-2 backdrop-blur-2xl fixed w-full">
+    <header className="px-4 py-4 z-20 backdrop-blur-2xl fixed w-full">
       <nav className="flex justify-between items-center md:px-20">
         {/* Left: Name */}
         <section>
