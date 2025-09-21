@@ -1,7 +1,12 @@
 {
   "name": "my-website",
+  "author": {
+    "name": "Harsh Vyapari (@harshv5094)",
+    "email": "harshvy5094@proton.me",
+    "url": "https://harshv5094.vercel.app"
+  },
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

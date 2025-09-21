@@ -3,28 +3,42 @@ import Main from '../components/Main'
 import SEO from '../components/SEO'
 
 function About() {
+  // A state for storing github api keys data
   const [stats, setStats] = useState({ followers: 0, following: 0 })
 
+  // This is a async function which returns a Promise
   const fetchStats = async () => {
     try {
+      // Fetch is browser inbuilt function to fetching asynchronous data call from api
       const response = await fetch('https://api.github.com/users/harshv5094')
+
+      // If it fails to fetch the data, this'll throw this Error object
       if (!response.ok) {
         throw new Error('Failed to fetch data')
       }
+
+      // Else the raw html is converted to usable JavaScript object.
       const data = await response.json()
+
+      // Then we set the response data values in state variable
       setStats({ followers: data.followers, following: data.following })
     } catch (error) {
+      // If everything in the try block fails, then this catch block statement will run.
       console.error('Error fetching github stats: ', error)
     }
   }
 
+  // Calling fetch status function here
   useEffect(() => {
     fetchStats()
   }, [])
 
   return (
     <>
+      {/* Base SEO Component */}
       <SEO title="Harsh Vyapari - About" />
+
+      {/* My Introduction Section */}
       <Main horizontal={true}>
         <div className="gap-5 flex flex-col">
           {/* Short Introduction */}
@@ -44,7 +58,7 @@ function About() {
           {/* Connect With Me */}
           <section>
             <h2 className="text-2xl font-serif">Connect with me</h2>
-            <p className="mt-2">
+            <div className="mt-2">
               <section>
                 <a
                   target="_blank"
@@ -82,7 +96,7 @@ function About() {
                   </code>
                 </a>
               </section>
-            </p>
+            </div>
           </section>
 
           {/* My Stats */}
