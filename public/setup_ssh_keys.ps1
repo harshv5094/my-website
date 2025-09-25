@@ -1,17 +1,18 @@
 param (
-    [string]$KeyType = "both",       # Accepts: github, gitlab, or both (default)
+    [string]$HostName,               # Example: github.com, gitlab.com, bitbucket.org
     [string]$Email
 )
 
-if (-not $Email) {
-    Write-Error "❌ Usage: .\setup_ssh_keys.ps1 [github|gitlab] your_email@example.com"
+if (-not $HostName -or -not $Email) {
+    Write-Error "❌ Usage: .\setup_ssh_keys.ps1 <hostname> your_email@example.com"
     exit 1
 }
 
 $sshDir = "$HOME\.ssh"
-$githubKey = "id_github"
-$gitlabKey = "id_gitlab"
-$configFile = "$sshDir\config"
+# Normalize hostname for filename (replace dots with underscores)
+$keyName = "id_" + ($HostName -replace '\.', '_')
+$keyPath = Join-Path $sshDir $keyName
+$configFile = Join-Path $sshDir "config"
 
 # Ensure .ssh directory exists
 if (!(Test-Path $sshDir)) {
@@ -19,26 +20,12 @@ if (!(Test-Path $sshDir)) {
 }
 icacls $sshDir /inheritance:r /grant:r "$env:USERNAME:F" | Out-Null
 
-# Generate GitHub Key
-if ($KeyType -eq "github" -or $KeyType -eq "both") {
-    $githubKeyPath = Join-Path $sshDir $githubKey
-    if (!(Test-Path "$githubKeyPath")) {
-        Write-Output "🔑 Generating SSH key for GitHub..."
-        ssh-keygen -t ed25519 -f $githubKeyPath -C $Email -N "" | Out-Null
-    } else {
-        Write-Warning "⚠️  GitHub key already exists — skipping."
-    }
-}
-
-# Generate GitLab Key
-if ($KeyType -eq "gitlab" -or $KeyType -eq "both") {
-    $gitlabKeyPath = Join-Path $sshDir $gitlabKey
-    if (!(Test-Path "$gitlabKeyPath")) {
-        Write-Output "🔑 Generating SSH key for GitLab..."
-        ssh-keygen -t ed25519 -f $gitlabKeyPath -C $Email -N "" | Out-Null
-    } else {
-        Write-Warning "⚠️  GitLab key already exists — skipping."
-    }
+# Generate key if missing
+if (!(Test-Path $keyPath)) {
+    Write-Output "🔑 Generating SSH key for $HostName..."
+    ssh-keygen -t ed25519 -f $keyPath -C $Email -N "" | Out-Null
+} else {
+    Write-Warning "⚠️  Key for $HostName already exists — skipping."
 }
 
 # Create config file if missing
@@ -48,36 +35,21 @@ if (!(Test-Path $configFile)) {
 # Ensure proper permissions
 icacls $configFile /inheritance:r /grant:r "$env:USERNAME:F" | Out-Null
 
-# Append GitHub config if not present
-if ((Test-Path "$sshDir\$githubKey") -and !(Select-String -Path $configFile -Pattern "Host github.com" -Quiet)) {
+# Append SSH config if not present
+if ((Test-Path $keyPath) -and !(Select-String -Path $configFile -Pattern "Host $HostName" -Quiet)) {
     Add-Content $configFile @"
-Host github.com
-    HostName github.com
+Host $HostName
+    HostName $HostName
     User git
-    IdentityFile $sshDir\$githubKey
-    IdentitiesOnly yes
-
-"@
-}
-
-# Append GitLab config if not present
-if ((Test-Path "$sshDir\$gitlabKey") -and !(Select-String -Path $configFile -Pattern "Host gitlab.com" -Quiet)) {
-    Add-Content $configFile @"
-Host gitlab.com
-    HostName gitlab.com
-    User git
-    IdentityFile $sshDir\$gitlabKey
+    IdentityFile $keyPath
     IdentitiesOnly yes
 
 "@
 }
 
 # Summary
-Write-Host "`n✅ SSH setup complete.`n"
-Write-Host "📎 To copy your public key(s), run:"
-if (Test-Path "$sshDir\$githubKey.pub") {
-    Write-Host "   • Get-Content '$sshDir\$githubKey.pub' (GitHub)"
-}
-if (Test-Path "$sshDir\$gitlabKey.pub") {
-    Write-Host "   • Get-Content '$sshDir\$gitlabKey.pub' (GitLab)"
+Write-Host "`n✅ SSH setup complete for $HostName.`n"
+Write-Host "📎 To copy your public key, run:"
+if (Test-Path "$keyPath.pub") {
+    Write-Host "   • Get-Content '$keyPath.pub'"
 }
